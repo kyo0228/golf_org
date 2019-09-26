@@ -1,0 +1,44 @@
+@CHARSET "utf-8";
+
+/********************************************************/
+/* 全体HTML */
+/********************************************************/
+/*html {
+	font-family:"游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "Meiryo UI" , "メイリオ" , Meiryo , Avenir ,  "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "ＭＳ Ｐゴシック" , "MS PGothic" ,"Open Sans", Helvetica , Arial , Roboto ,  sans-serif;
+}*/
+
+/********************************************************/
+/* 全体BODY */
+/********************************************************/
+/*body	{		
+	font-family:"游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "Meiryo UI" , "メイリオ" , Meiryo , Avenir ,  "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "ＭＳ Ｐゴシック" , "MS PGothic" ,"Open Sans", Helvetica , Arial , Roboto ,  sans-serif;
+}*/
+
+/********************************************************/
+/* 共通エラーエリア */
+/********************************************************/
+.system_error_area	{		
+	border: 1px #000 solid;
+	padding:10px;
+}
+
+.system_error_line	{		
+	color:red;
+}
+
+/********************************************************/
+/* 開発モードのvar_dumpエリア */
+/********************************************************/
+.system_dump_area	{
+	margin-top: 50px;
+	border: 1px #000 solid;
+	padding:10px;
+	font-size: 15px;
+}
+
+.system_dump_area h4	{		
+	font-size: 20px;
+	font-weight: bold;
+}
+
+

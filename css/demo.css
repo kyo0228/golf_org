@@ -1,0 +1,185 @@
+.tim-typo {
+  padding-left: 25%;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.tim-typo .tim-note {
+  bottom: 5px;
+  color: #c0c1c2;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  left: 0;
+  margin-left: 20px;
+  position: absolute;
+  width: 260px;
+  
+}
+
+.info_row{
+   display: -webkit-inline-flex;
+   display: inline-flex;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;   
+   padding: 10px;
+   vertical-align: middle;
+} 
+
+.info_title{
+  bottom: 5px;
+  color: #c0c1c2;
+  font-weight: 400;
+  font-size:1.1em;
+  line-height: 45px;
+  vertical-align: middle;
+  margin-left: 20px;
+} 
+
+.info_img {
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.info_msg {
+  font-size: 1.8em;
+  margin-left: 40px;
+  font-weight: normal;
+}
+
+
+h1 {
+  position: relative;
+  color: inherit;
+  height: 50px;
+  font-size: 1.6rem;
+  line-height: 30px;
+  padding: 0.625rem 0;
+  font-weight: 300;
+  margin-left: 1rem;  
+}  
+
+
+/* offline-doc */
+
+.offline-doc .navbar.navbar-transparent {
+  padding-top: 25px;
+  border-bottom: none;
+}
+
+.offline-doc .navbar.navbar-transparent .navbar-minimize {
+  display: none;
+}
+
+.offline-doc .navbar.navbar-transparent .navbar-brand,
+.offline-doc .navbar.navbar-transparent .collapse .navbar-nav .nav-link {
+  color: #FFFFFF !important;
+}
+
+.offline-doc .footer {
+  z-index: 3 !important;
+}
+
+.offline-doc .page-header .container {
+  z-index: 3;
+}
+
+.offline-doc .page-header:after {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#map {
+  z-index: 2;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+}
+
+
+.compe_member{
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;     
+   
+}
+
+.compe_member label{
+padding: 0 20px 0 10px;
+   
+}
+
+.compe_member .fileinput{
+padding: 0 20px 0 10px;
+   
+}
+
+/*スコア登録のその他用*/
+.score_other{
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;     
+ 
+}
+.score_other div{
+    padding-right: 20px;
+}
+
+.score_other .x1{
+  width: 80px;  
+}
+
+.score_other .x2{
+  width: 160px;  
+}
+
+.score_other .x3{
+  width: 240px;  
+}
+
+/*コンペ一覧用*/
+.compe_list{
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;     
+ 
+}
+
+
+/*
+
+@font-face {
+  font-family: "Custom Yu Gothic";
+  src: local("Yu Gothic");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Custom Yu Gothic";
+  src: local("Yu Gothic");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Custom Yu Gothic";
+  src: local("Yu Gothic");
+  font-weight: bold;
+}
+selector {
+  font-family: YuGothic, "Custom Yu Gothic", "Yu Gothic", sans-serif;
+}
+*/
+
+.bgcolor_disabled {
+  background-color: #c0c1c2 ;
+}

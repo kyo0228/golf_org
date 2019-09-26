@@ -1,0 +1,798 @@
+@charset "UTF-8";
+
+* {
+  margin:0;
+	
+	-webkit-box-sizing: border-box;
+		 -moz-box-sizing: border-box;
+			 -o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+					box-sizing: border-box;	
+}
+
+html,
+body{
+	background-color: #e9f0f4;	
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	-webkit-text-size-adjust: 100%;
+	color: #000;	
+	width: 100%;
+	height: 100%;
+}
+
+a,
+input,
+p{
+	margin: 5px auto;
+}
+
+input[type=text], input[type=password]{
+	width: 98%;
+	padding:5px 0px 5px 5px;
+	font-size:1.0em;
+	border:solid 1px #ccc;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;	
+	
+}
+
+a {text-decoration: none;color: #fff;}
+a:link { color: #fff; }
+a:visited { color: #fff; }
+a:hover { color: #fff; }
+a:active { color: #fff; }
+
+
+/*flexboxのデフォルト値*/
+.fb{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-items: stretch;
+	align-items: stretch;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+
+.fb-wrap{
+	-webkit-box-lines:multiple;
+	-moz-box-lines:multiple;
+	-webkit-flex-wrap:wrap;
+	-moz-flex-wrap:wrap;
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+
+/*flexboxの子要素横位置中央*/
+.fb-center{
+	-webkit-justify-content: center;
+	justify-content: center;	
+}
+
+/*flexboxの子要素縦並び*/
+.fb-column{
+	-webkit-flex-direction: column; /* Safari */
+	flex-direction: column;
+}
+
+
+
+
+
+
+
+
+/*loginフォームの全体。中央配置用にflexbox使用*/
+.login_contents{	
+	background: url("/images/mmcc01.jpg") center center / cover no-repeat fixed;		
+	
+	text-align: center;
+	height: 100%;
+}
+
+/*角丸のlogin入力エリア*/
+.login_area{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    border-radius: 5px;
+    color: #FFF;
+		width: 500px;
+}
+
+@media screen and (max-width:550px){
+	.login_area{
+	max-width: 100%;
+	height: auto;
+	width:auto;
+	}
+}
+
+/*nxロゴ配置エリア*/
+.login_area_header{
+	
+	background: #ffffff;
+	padding: 10px 5px 10px 5px;
+	border-radius: 5px 5px 0 0;
+	color: #000;
+}
+
+/*nxロゴ配置エリア*/
+.login_area_header img{
+	height: 50px;
+}
+
+/*loginの入力エリア*/
+.login_area_main{
+    text-align: left;
+    padding: 20px;
+}
+
+
+.button {
+  -webkit-appearance: none;
+  border-radius: 0;  
+	display: inline-block;
+	width: 100%;
+	height: 54px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 54px;
+	outline: none;
+  border: none;
+}
+
+.button::before,
+.button::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+
+.button,
+.button::before,
+.button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.button2 {
+	display: inline-block;
+	width: 130px;
+	height: 40px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+	outline: none;
+	font-weight: bold;
+}
+
+/*------色関連------*/
+
+/*NXの紺*/
+.navyblue{background-color: #13007c;color: #fff;	}
+.navyblue:hover{	background-color: #59b1eb;	color: #fff;}
+
+.palered { background-color: #f77c78;color: #fff; }
+
+/* 文字色 */
+.str_color1 { color: #bfcbd5; }
+.str_color2 { color: #f77c78; }
+
+/*------fontawesome関連------*/
+
+/*丸囲みの標準色*/
+.fa-stack{
+color: #a9a9a9;
+}
+
+/*丸囲みのhoverで紺色*/
+.fa-stack:hover{
+	color: #13007c;
+}
+
+
+/*ページ全体*/
+.container{
+	min-height: 100vh;
+}
+
+/*ヘッダー*/
+.header{
+	border-top: 4px solid #00a0e9;
+	background-color: #ffffff;
+	padding:5px 5px 0px;
+}
+.header ul{
+	padding:0px;
+	list-style-type: none!important;/*ポチ消す*/
+	display: flex;
+}
+.header li {
+	height: 64px;
+}
+.header li:first-child {
+  margin-right: auto;
+}
+
+
+/*コンテンツエリア。ヘッダーから下の全体*/
+.contents{
+	flex: 1 0 auto;/*frexboxの空き領域を埋める*/	
+}
+
+/*contents内の左メニュー*/
+.contents_left{	
+	padding: 5px;
+	width: 225px;	
+	height: auto;
+	background-color: #13007c;
+	color: #fff;	
+}
+
+/* メニュー大分類 */
+.menu {	
+	list-style-type: none; 	
+	padding: 0px;
+	margin: 0px;		
+	background-color: #13007c;
+}
+
+.menu > li  {
+	display: inline-block;
+	width: 215px;
+}	
+
+.menu > li > a {
+	padding: 0px 5px 0px 10px;
+	display: inline-block;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}	
+
+/*
+.menu > li > a:hover {
+	background-color: #00a0e9;
+}
+*/
+
+/* メニュー中分類 */
+.menu > li > ul {
+	list-style-type: none; 	
+	padding: 0px;
+	margin: 0px;		
+}
+
+.menu > li > ul > li {
+	padding: 0px 5px 0px 10px;
+	margin: 0px 5px 0px 10px;
+	display: inline-block;
+	width: 210px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1em;
+	letter-spacing: 0.2em;	
+	position: relative;
+	background-color: #13007c;
+}
+
+.menu > li > ul > li:hover {
+	background-color: #00a0e9;
+}
+
+/* メニュー小分類 */
+.menu > li > ul > li > ul {
+	list-style-type: none; 	
+	padding: 0px;
+	margin: 0px;		
+	position:absolute;
+	top: 0px;
+	left: 210px;
+	z-index: 2;
+	background-color: #13007c;
+}
+
+.menu > li > ul > li > ul > li {
+	padding: 0px;
+	margin: 0px;
+	display: none;
+	width: 280px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 0.9em;
+	letter-spacing: 0.2em;	
+	background-color: #13007c;		
+}
+	
+.menu > li > ul > li > ul > li:hover {
+	background-color: #00a0e9;
+}	
+
+.menu > li > ul > li:hover > ul > li {
+	display: inline-block;
+}
+
+/*contents内のメインエリア*/
+.contents_base{	
+	padding: 5px;
+	flex: 1 0 auto;/*コンテンツ内の空き領域を埋める*/
+	width: 80%;
+	width : -webkit-calc(100% - 225px) ;
+	width : calc(100% - 225px) ;
+	
+}
+
+
+/*フッター。いまは使っていない*/
+.footer{
+    height: 30px;
+		background-color: #59b1eb;
+}
+
+
+/*contents_base内のページタイトル*/
+.page_title{
+	width: 100%;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: left;
+	padding: 5px;
+	/*border-radius: 2px;*/
+	color: #fff;
+	/*
+	box-shadow:1px 1px 2px 1px #aaaaaa;
+	border-bottom: 3px #13007c solid;
+	*/
+	margin-bottom: 10px;
+	background-color: #2e3641;
+}
+
+/*contents_base内のViewエリア*/
+.page_view{
+	/*
+	border-radius: 2px;		
+	box-shadow:1px 1px 2px 1px #aaaaaa;	
+	border:1px solid #aaaaaa;
+  */
+	background-color: #e9f0f4;
+	flex: 1 0 auto;/*コンテンツ内の空き領域を埋める*/
+	width: 100%;
+}
+
+/*範囲確認用*/
+.area_check{
+	border:1px solid red;
+	background-color: #aaaaaa;
+	
+}
+
+
+/*View内分割30%*/
+.view_30{
+	margin: 5px;
+	padding:5px;
+	width: 30%
+}
+
+/*View内分割50%*/
+.view_50{
+	margin: 5px;
+	padding:5px;
+	width: 50%
+}
+
+/*View内分割70%*/
+.view_70{
+	margin: 5px;
+	padding:5px;
+	width: 70%
+}
+
+/*View内分割なし*/
+.view_100{
+	/*
+	margin: 5px;
+	padding:5px;
+  */
+	width: 100%
+}
+
+/*view内のグループ用*/
+
+.group_box{
+	/*
+	border-radius: 2px;		
+	box-shadow:1px 1px 2px 1px #aaaaaa;
+  */
+	border:1px solid #aaaaaa;
+	margin-bottom: 10px;
+	background-color: #ffffff;
+	color: #404040;
+	
+
+}
+
+.group_box img{
+	width: 100%;
+}
+
+.group_box h3{
+	font-size: 1.1em;
+	font-weight: bold;
+	padding :5px;
+	
+	/*border-bottom: 3px #ff6600 solid;*/
+	background-color: #2e3641;
+	color: #fff;
+}
+
+.scroll_box {
+	width: 100%;
+	height: 200px;
+	overflow-y: auto;
+}
+
+.scroll_box > p {
+	margin: 2px 30px 15px 40px;
+	font-size: 15px;
+}
+
+.menu_box {	
+	border: 1px solid #00a0e9;
+	width: 300px;
+	height: 200px;
+	text-align: center;
+	cursor: pointer;
+	margin: 0px 10px 10px 0px;
+	background-color: #fff;
+}
+
+.menu_box .title {
+	color: #000;
+	margin-top: 15px;
+	font-size: 1.2em;
+	font-weight: bold;
+}	
+
+.menu_box .icon {
+	color: #000;
+	margin-top: 15px;
+	font-size: 6em;
+}
+
+.fa-ul li{
+	margin: 10px 5px 10px 0;
+	border-bottom: 1px #cccccc dotted;
+}
+
+.font_bold{
+	font-weight: bold;
+}
+
+.float_container {
+	display: inline-block;
+}
+
+.float_container:after{
+  content: "."; 
+  display: block; 
+  height: 0; 
+  font-size:0;	
+  clear: both; 
+  visibility:hidden;
+	margin: 0px;
+}
+
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+.badge {
+  padding: 1px 6px;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 3px #ddd;
+  
+}
+
+.badge2 {
+  padding: 3px 20px;
+  color: white;
+  border-radius: 6px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.badge_blue {
+  background-color: #58ACFA; /*青*/
+}
+
+.badge_blue2 {
+	background-color: #46bfbd; 
+}	
+
+.badge_pink {
+  background-color: #ff69b4; /*ピンク*/
+}
+
+.badge_red {
+  background-color: #f7464a; 
+}
+
+.badge_yellow {
+  background-color: #fdb45c; 
+}
+
+.badge_gray {
+  background-color: #949fb1; 
+}
+
+
+
+
+table{
+/*border-collapse: collapse;
+border-spacing: 0;*/
+}
+
+.normal_table{
+/*border-collapse: collapse;
+border-spacing: 0;*/
+}
+
+.normal_table th{
+	padding: 5px 0;
+	text-align: center;	
+	color: #fff;
+	background-color: #2e3641;	
+	/*border-bottom: 1px #ffffff solid;*/
+}
+
+.normal_table td{
+	padding: 5px 3px;
+	text-align: left;
+	/*color: #bfcbd5;*/
+	background-color: #ffffff;
+	border-bottom: 1px #cccccc dotted;
+}
+
+.normal_table td a{
+	color: #46bfdb;
+}	
+
+.bar {
+    display: none;
+}
+input:checked + div {
+    display: block;
+}
+
+.hidden_row{
+	display: none;
+}
+.hidden_row td{	
+	background-color: #cccccc;
+	height: 100%;
+}
+
+.accordion_btn{
+	
+}
+
+
+input:checked + div{background-color: #58ACFA;}
+
+/*
+.accordion_btn:checked ~ .hidden_row {
+	display:inherit;
+	max-height: 46px;
+  opacity: 1;
+}*/
+
+.tbl_history{
+	margin: 5px;
+	padding: 0px;
+	/*border: 1px #000 solid;*/
+}
+
+.tbl_history .col{
+	height: 100%;
+	margin: 0px 1px 0px 0px;
+	padding: 5px 0;
+	text-align: center;
+	background-color: #f0e68c;
+	
+	border-bottom: 1px #ffffff solid;
+	
+	-webkit-flex-grow: 1;
+	width: 100%;
+}
+
+.tbl_history .row{
+	height: 100%;
+	margin: 0px 1px 0px 0px;
+	padding: 5px 3px;
+	text-align: left;
+	background-color: #ffffff;
+	border-bottom: 1px #cccccc dotted;
+	
+	width: 100%;
+	
+  -webkit-align-items: baseline; /* Safari */
+  align-items:         baseline;	
+}
+
+/* ナンバープレート */
+.plate {
+	border:1px solid #c0c0c0;
+	width: 200px;	
+	text-align: center;
+	border-radius:5px;
+	background-color: #fff;
+	color: #006400;
+}
+
+.plate_area {
+	font-size: 1em;
+	margin-top: 5px;
+	height: 18px;
+	position: relative;
+	width: 100%;
+}
+
+.plate_area:before {
+	content: "\f055";
+  font-family: "FontAwesome";
+	font-size: 0.7em;	
+	margin-right: 10px;
+}
+
+.plate_area:after {
+	content: "\f055";
+	font-family: "FontAwesome";
+	font-size: 0.7em;
+	margin-left: 10px;
+}
+
+.plate_kana {
+	font-size: 0.9em;
+}	
+
+.plate_num {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+/* ナンバープレート(mini) */
+.plate_mini {
+	border:1px solid #c0c0c0;
+	width: 130px;	
+	text-align: center;
+	border-radius:5px;
+	background-color: #fff;
+	color: #006400;
+}
+
+.plate_area_mini {
+	font-size: 0.9em;
+	margin-top: 5px;
+	height: 16px;
+	position: relative;
+	width: 100%;
+}
+
+.plate_area_mini:before {
+	content: "\f055";
+  font-family: "FontAwesome";
+	font-size: 0.6em;	
+	margin-right: 10px;
+}
+
+.plate_area_mini:after {
+	content: "\f055";
+	font-family: "FontAwesome";
+	font-size: 0.6em;
+	margin-left: 10px;
+}
+
+.plate_kananum_mini {
+	height: 32px;
+}	
+
+.plate_kana_mini {
+	font-size: 0.8em;	
+}	
+
+.plate_num_mini {
+	font-size: 1.9em;
+	font-weight: bold;
+}
+	
+/* 車検証ステッカー風 */
+.regbox {
+	width:100px;
+	height:100px;
+	position: relative;	
+	color: #000;
+	background: url("/images/reglogo.gif") no-repeat;
+	background-color: #fff;
+	background-size:100px 100px;
+	font-weight: bold;
+}
+
+.regyear {
+	position: absolute;
+	top: 2px;
+	left: 5px;	
+	font-size: 1.7em;
+}
+
+.regmonth {
+	position: absolute;
+	width: 85px;
+	top: 25px;
+	left: 10px;
+	font-size: 4em;	
+	letter-spacing: -5px;
+	text-align: center;	
+}
+
+/* 車検証ステッカー風(mini) */
+.regbox_mini {
+	width:60px;
+	height:60px;
+	position: relative;	
+	color: #000;
+	background: url("/images/reglogo.gif") no-repeat;
+	background-color: #fff;
+	background-size:60px 60px;
+	font-weight: bold;
+}
+
+.regyear_mini {
+	position: absolute;
+	top: 2px;
+	left: 5px;	
+	font-size: 1.3em;
+}
+
+.regmonth_mini {
+	position: absolute;
+	width: 50px;
+	top: 12px;
+	left: 10px;
+	font-size: 3em;	
+	letter-spacing: -5px;
+	text-align: center;	
+}
+
+/* 日めくりカレンダー */
+.today_box {
+	margin: 0px 15px;
+}
+
+.today_style {
+	font-style: italic;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.top_box {	
+	border: 1px solid #000;
+	width: 350px;
+	text-align: center;
+	margin: 0px 10px 10px 0px;
+	padding: 0px;
+}
